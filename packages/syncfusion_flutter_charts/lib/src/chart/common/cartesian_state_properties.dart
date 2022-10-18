@@ -306,8 +306,7 @@ class CartesianStateProperties extends StateProperties {
     seriesRendererDetails.seriesAnimation =
         Tween<double>(begin: 0.0, end: 1.0).animate(CurvedAnimation(
       parent: seriesRendererDetails.animationController,
-      curve: Interval(minSeriesInterval, maxSeriesInterval,
-          curve: Curves.decelerate),
+      curve: Curves.linear,
     ));
     seriesRendererDetails.seriesElementAnimation =
         Tween<double>(begin: 0.0, end: 1.0).animate(CurvedAnimation(
